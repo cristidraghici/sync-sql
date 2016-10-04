@@ -1,5 +1,9 @@
 # sync-mysql
 
+[![Node.js Version][node-version-image]][node-version-url]
+
+---
+
 **sync-mysql** is designed to make synchronous queries to the database. It has been developed as a tool to help [nightwatch.js](http://nightwatchjs.org/) tests - or other such tools - connect directly to a mysql database.
 
 ## Testing
@@ -13,24 +17,33 @@ You should not be using this in a production evironment. Node.js is designed to 
 ## Install
 
 ```
-npm install sync-mysql
+npm install cristidraghici/sync-mysql
 ```
 
 ## Usage
 
 ```js
-var syncMysql = require('sync-mysql');
+var syncMysql = require('../');
 
-var output = syncMysql("select * from users", {
-	host: 'localhost',
-	user: 'user',
-	pass: 'password',
-	database: 'database',
-	port: '3306'
-});
+var output = syncMysql(
+	{
+		host: 'localhost',
+		user: 'user',
+		pass: 'password',
+		database: 'database',
+		port: '3306'
+	},
+	"select * from users"
+);
 
 console.log(output);
 ```
+
+## Testing
+
+- please edit the *.env.example* with database information and the sql to test and save the file as *.env*;
+- run `npm install`;
+- run `npm run test`.
 
 ## Workflow
 

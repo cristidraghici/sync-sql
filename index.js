@@ -5,8 +5,6 @@ var spawnSync = require('child_process').spawnSync;
 var JSONB = require('json-buffer');
 var fs = require('fs');
 
-//Function('', fs.readFileSync(require.resolve('./lib/worker.js'), 'utf8'));
-
 /**
  * Execute the query on the database
  * @throws {Error} Errors thrown while executing
@@ -14,7 +12,7 @@ var fs = require('fs');
  * @param   {object} connection Connection information: host, user, pass, database, port (optional)
  * @returns {object} Object containing the response
  */
-module.exports = function (query, connection) {
+module.exports = function (connection, query, params) {
 	var req,
 		res;
 	
@@ -23,14 +21,15 @@ module.exports = function (query, connection) {
 	}
 
 	req = JSONB.stringify({
-		query: query || '',
 		connection: {
 			host: connection.host,
 			user: connection.user,
-			pass: connection.pass,
+			password: connection.password,
 			database: connection.database,
-			port: connection.port
-		}
+			port: parseInt(connection.port, 10)
+		},
+		query: query || '',
+		params: params || []
 	});
 
 	res = spawnSync(process.execPath, [require.resolve('./lib/worker.js')], {
