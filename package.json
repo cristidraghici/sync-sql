@@ -1,5 +1,5 @@
 {
-  "name": "sync-mysql",
+  "name": "sync-sql",
   "version": "1.0.0",
   "description": "Make synchronous queries to a database server in node.js",
   "main": "index.js",

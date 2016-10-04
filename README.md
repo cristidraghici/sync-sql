@@ -9,7 +9,7 @@
 ## Install
 
 ```
-npm install cristidraghici/sync-sql
+npm install sync-sql
 ```
 
 ## Example usage with mysql
