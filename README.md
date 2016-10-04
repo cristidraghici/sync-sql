@@ -1,6 +1,6 @@
 # sync-sql
 
-**sync-sql** is designed to make synchronous queries to the database. It has been developed as a tool to help [nightwatch.js](http://nightwatchjs.org/) tests - or other such tools - connect directly to a mysql database.
+**sync-sql** is designed to make synchronous queries to the database. It has been developed as a tool to help [nightwatch.js](http://nightwatchjs.org/) tests - or other such tools - connect directly to an sql database.
 
 ## Important note
 
