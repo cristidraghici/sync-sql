@@ -1,33 +1,37 @@
 {
   "name": "sync-mysql",
   "version": "1.0.0",
-  "description": "Make synchronous queries to a mysql server in node.js",
+  "description": "Make synchronous queries to a database server in node.js",
   "main": "index.js",
   "scripts": {
-    "test": "node test"
+    "test": "node test",
+    "test-mysql": "node test/mysql",
+    "test-pg": "node test/postgres"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cristidraghici/sync-mysql.git"
+    "url": "git+https://github.com/cristidraghici/sync-sql.git"
   },
   "keywords": [
     "nodejs",
     "mysql",
+    "postgres",
     "synchronous"
   ],
   "author": "Cristi Draghici",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cristidraghici/sync-mysql/issues"
+    "url": "https://github.com/cristidraghici/sync-sql/issues"
   },
-  "homepage": "https://github.com/cristidraghici/sync-mysql#readme",
+  "homepage": "https://github.com/cristidraghici/sync-sql#readme",
   "engines": {
     "node": ">= 0.12"
   },
   "dependencies": {
     "concat-stream": "^1.5.2",
     "json-buffer": "^2.0.11",
-    "mysql": "^2.11.1"
+    "mysql": "^2.11.1",
+    "pg": "^6.1.0"
   },
   "devDependencies": {
     "dotenv": "^2.0.0"
