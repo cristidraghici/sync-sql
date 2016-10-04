@@ -19,7 +19,7 @@ npm install cristidraghici/sync-mysql
 ## Usage
 
 ```js
-var syncMysql = require('../');
+var syncMysql = require('sync-mysql');
 
 var output = syncMysql(
 	{
@@ -32,7 +32,7 @@ var output = syncMysql(
 	"select * from users"
 );
 
-console.log(output);
+console.log(JSON.stringify(output));
 ```
 
 ## Testing
