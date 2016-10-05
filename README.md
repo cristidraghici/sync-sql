@@ -12,6 +12,12 @@
 npm install sync-sql
 ```
 
+For using the latest version with bug fixes, try the command:
+
+```
+npm install cristidraghici/sync-sql
+```
+
 ## Example usage with mysql
 
 ```js
