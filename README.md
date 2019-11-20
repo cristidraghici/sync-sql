@@ -27,7 +27,7 @@ var output = syncSql.mysql(
 	{
 		host: 'localhost',
 		user: 'user',
-		pass: 'password',
+		password: 'password',
 		database: 'database',
 		port: '3306'
 	},
